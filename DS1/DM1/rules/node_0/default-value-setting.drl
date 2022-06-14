@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>690ba8a6-63f3-477f-bab8-4d7c38068587</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set Customer to a new Customer where
+		the address is "", 
+		the loyalty is Normal , 
+		the name is "" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

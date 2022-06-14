@@ -1,0 +1,178 @@
+
+
+public class Basket
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Basket"
+        property "de.generated" "true"
+{
+    public java.util.List productses domain 0,* class Product
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "productses"
+                property update "true";
+    public Basket(java.util.List productses domain 0,* class Product)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Basket()
+                property "dataio.default" "true";
+    public void addTo_productses(Product productses)
+                property collectionAttribute "productses"
+                property update "true";
+    public void clear_productses()
+                property collectionAttribute "productses"
+                property update "true";
+    public void removeFrom_productses(Product productses)
+                property collectionAttribute "productses"
+                property update "true";
+    public void set_productses(java.util.Collection productses domain 0,* class Product)
+                property collectionAttribute "productses"
+                property update "true";
+}
+
+public class Customer
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Customer"
+        property "de.generated" "true"
+{
+    public string address
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "address"
+                property update "true";
+    public Loyalty loyalty
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loyalty"
+                property update "true";
+    public string name
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public Customer(string address, Loyalty loyalty, string name)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Customer()
+                property "dataio.default" "true";
+}
+
+public class Fruit
+        extends java.lang.Enum
+        property "ads.typeId" "13"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Fruit"
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "0"
+        property "com.ibm.rules.domainProvider.msexcel.documentationColumn.en_US" "2"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en_US" "1"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "0"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property "de.generated" "true"
+        property domainProviderResource "domains/dynamicDomainTemplate.xlsx"
+{
+    domain {static apple, static grape, static peach, static pear}
+    public static final readonly Fruit apple
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Apple";
+    public static final readonly Fruit grape
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Grape";
+    public static final readonly Fruit peach
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Peach";
+    public static final readonly Fruit pear
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Pear";
+}
+
+public class Loyalty
+        extends java.lang.Enum
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Loyalty"
+        property "de.generated" "true"
+{
+    domain {static gold, static normal, static platinum, static silver}
+    public static final readonly Loyalty gold
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gold";
+    public static final readonly Loyalty normal
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Normal";
+    public static final readonly Loyalty platinum
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Platinum";
+    public static final readonly Loyalty silver
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Silver";
+}
+
+public class Product
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Product"
+        property "de.generated" "true"
+{
+    public string description
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "description"
+                property update "true";
+    public string id
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "id"
+                property update "true";
+    public double price
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "price"
+                property update "true";
+    public Product(string description, string id, double price)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Product()
+                property "dataio.default" "true";
+}
+
+public class Purchase
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Purchase"
+        property "de.generated" "true"
+{
+    public ilog.rules.brl.Date date
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "date"
+                property update "true";
+    public double discount
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "discount"
+                property update "true";
+    public java.util.List productses domain 0,* class Product
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "productses"
+                property update "true";
+    public double totalPrice
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "totalPrice"
+                property update "true";
+    public Purchase(ilog.rules.brl.Date date, 
+        double discount, 
+        java.util.List productses domain 0,* class Product, 
+        double totalPrice)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Purchase()
+                property "dataio.default" "true";
+    public void addTo_productses(Product productses)
+                property collectionAttribute "productses"
+                property update "true";
+    public void clear_productses()
+                property collectionAttribute "productses"
+                property update "true";
+    public void removeFrom_productses(Product productses)
+                property collectionAttribute "productses"
+                property update "true";
+    public void set_productses(java.util.Collection productses domain 0,* class Product)
+                property collectionAttribute "productses"
+                property update "true";
+}
+

@@ -1,0 +1,69 @@
+
+# Basket
+Basket#concept.label = Basket
+Basket.Basket(java.util.List)#phrase.navigation = a new {Basket} where {0, products}
+Basket.addTo_productses(Product)#phrase.action = add {0} to the productses of {this}
+Basket.clear_productses()#phrase.action = clear the productses of {this}
+Basket.productses#phrase.action = set the productses of {this} to {products}
+Basket.productses#phrase.navigation = {products} of {this}
+Basket.removeFrom_productses(Product)#phrase.action = remove {0} from the productses of {this}
+
+# Customer
+Customer#concept.label = Customer
+Customer.Customer(java.lang.String,Loyalty,java.lang.String)#phrase.navigation = a new {Customer} where {0, address} {1, loyalty} {2, name}
+Customer.address#phrase.action = set the address of {this} to {address}
+Customer.address#phrase.navigation = {address} of {this}
+Customer.loyalty#phrase.action = set the loyalty of {this} to {loyalty}
+Customer.loyalty#phrase.clearer = clear the loyalty of {this}
+Customer.loyalty#phrase.navigation = {loyalty} of {this}
+Customer.name#phrase.action = set the name of {this} to {name}
+Customer.name#phrase.navigation = {name} of {this}
+
+# Fruit
+Fruit#concept.label = Fruit
+Fruit.apple#instance.documentation = This is a fruit
+Fruit.apple#instance.label = Apple
+Fruit.grape#instance.label = Grape
+Fruit.peach#instance.documentation = Also this is a fruit
+Fruit.peach#instance.label = Peach
+Fruit.pear#instance.label = Pear
+
+# Loyalty
+Loyalty#concept.documentation = 
+Loyalty#concept.label = Loyalty
+Loyalty.gold#instance.label = Gold
+Loyalty.normal#instance.label = Normal
+Loyalty.platinum#instance.label = Platinum
+Loyalty.silver#instance.label = Silver
+
+# Product
+Product#concept.label = Product
+Product.Product(java.lang.String,java.lang.String,double)#phrase.navigation = a new {Product} where {0, description} {1, id} {2, price}
+Product.description#phrase.action = set the description of {this} to {description}
+Product.description#phrase.navigation = {description} of {this}
+Product.id#phrase.action = set the id of {this} to {id}
+Product.id#phrase.navigation = {id} of {this}
+Product.price#phrase.action = set the price of {this} to {price}
+Product.price#phrase.addition_setter = add {price} to the price of {this}
+Product.price#phrase.navigation = {price} of {this}
+Product.price#phrase.subtraction_setter = subtract {price} from the price of {this}
+
+# Purchase
+Purchase#concept.label = Purchase
+Purchase.Purchase(ilog.rules.brl.Date,double,java.util.List,double)#phrase.navigation = a new {Purchase} where {0, date} {1, discount} {2, products} {3, totalPrice}
+Purchase.addTo_productses(Product)#phrase.action = add {0} to the productses of {this}
+Purchase.clear_productses()#phrase.action = clear the productses of {this}
+Purchase.date#phrase.action = set the date of {this} to {date}
+Purchase.date#phrase.clearer = clear the date of {this}
+Purchase.date#phrase.navigation = {date} of {this}
+Purchase.discount#phrase.action = set the discount of {this} to {discount}
+Purchase.discount#phrase.addition_setter = add {discount} to the discount of {this}
+Purchase.discount#phrase.navigation = {discount} of {this}
+Purchase.discount#phrase.subtraction_setter = subtract {discount} from the discount of {this}
+Purchase.productses#phrase.action = set the productses of {this} to {products}
+Purchase.productses#phrase.navigation = {products} of {this}
+Purchase.removeFrom_productses(Product)#phrase.action = remove {0} from the productses of {this}
+Purchase.totalPrice#phrase.action = set the totalPrice of {this} to {totalPrice}
+Purchase.totalPrice#phrase.addition_setter = add {totalPrice} to the totalPrice of {this}
+Purchase.totalPrice#phrase.navigation = {totalPrice} of {this}
+Purchase.totalPrice#phrase.subtraction_setter = subtract {totalPrice} from the totalPrice of {this}
